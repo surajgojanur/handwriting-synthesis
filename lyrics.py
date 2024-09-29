@@ -1,190 +1,147 @@
 """lyrics taken from https://www.azlyrics.com/"""
 
-all_star = """Somebody once told me the world is gonna roll me
-I ain't the sharpest tool in the shed
-She was looking kind of dumb with her finger and her thumb
-In the shape of an "L" on her forehead
+all_star = """
+DIFFERENCE BETWEEN HADOOP AND RDBMS
+HADOOP RDBMS
+In this both structured and unstructured data is processed
+In this structured data is mostly processed
+It is highly scalable It is less scalable than Hadoop
+Ensures strong consistency through transactions
+Ensures strong consistency through transactions
+It stores huge volume of data It stores transformed and
+aggregated data
+It has some latency in response
+It has no latency in response
+Hadoop Ecosystem
+Hadoop Ecosystem is a platform or a suite which provides
+various services to solve the big data problems It includes
+Apache projects and various commercial tools and solutions
+There are four major elements of Hadoop ie HDFS MapReduce
+YARN and Hadoop Common Utilities
+Components of Hadoop Ecosystem
+1 HDFS Hadoop Distributed File System
+2 YARN Yet Another Resource Negotiator
+3 MapReduce Programming based Data Processing
+4 Spark InMemory data processing
+5 PIG HIVE Query based processing of data services
+6 HBase NoSQL Database
+7 Mahout Spark MLLib machine learning algorithm
+libraries
+8 Solar Lucene Searching and Indexing
+9 Zookeeper Managing cluster
+10 Oozie Job Scheduling
+HDFS is the primary or major component of Hadoop ecosystem
+and is responsible for storing large data sets of structured
+or unstructured data across various nodes and thereby
+maintaining the metadata in the form of log files
+YARN Yet Another Resource Negotiator as the name implies
+YARN is the one who helps to manage the resources across
+the clusters
+MAPREDUCE By making the use of distributed and parallel
+algorithms MapReduce makes it possible to carry over the
+processing logic and helps to write applications which
+transform big data sets into a manageable one
+PIG It is a platform for structuring the data flow
+processing and analyzing huge data setsPig does the work
+of executing commands and in the background all the
+activities of MapReduce are taken care of
+HIVE It is highly scalable as it allows realtime processing
+and batch processing both Also all the SQL datatypes are
+supported by Hive thus making the query processing easier
+MAHOUT allows Machine Learnability to a system or
+application as the name suggests helps the system to develop
+itself based on some patterns userenvironmental interaction
+or on the basis of algorithms
+NoSQL
+NoSQL is a nonrelational database that is used to store the
+data in the nontabular form NoSQL stands for Not only SQL
+It also referred to as not only SQL or nonSQL is an
+approach to database design that enables the storage and
+querying of data outside the traditional structures found
+in relational databases
+Types of NoSQL Database
+1 Keyvalue stores Ex Amazon DynamoDB
+2 Columnoriented databases Cassandra
+3 Documentbased databases MongoDB
+4 Graphbased databasesNeo4j
+Mongo DB
+MongoDB is an opensource database compatible across
+platforms and able to work with data using JSON and similar
+formats It means that MongoDB isnt based on the tablelike
+relational database structure but provides an altogether
+different mechanism for storage and retrieval of data
+It uses JSON format to insert the data
+Importance of Mongo DB
+1 It is a schemaless database that is simple to set up and
+use
+2 Because it is a schemaless database the code we write
+specifies the schema
+3 Data is saved in Binary JSON format a keyvalue pair no
+joins are required
+4 It stores data in RAM allowing quicker access to the data
+5 It can be used to balance loads
+6 It is inexpensive because it saves money on hardware and
+storage
+MongoDB Terminologies for RDBMS concepts
+RDBMS MongoDB
+Database Database
+Table View Collection
+Row Document JSON BSON
+Column Field
+Index Index
+Join Embedded Document
+Foreign Key Reference
+Partition Shard
+Basic Mongo DB Operations
+Operation Decsription
+use database name switched to database provided with
+command
+db To check currently selected database
+show dbs Displays the list of databases
+dbdropDatabase To Drop the database
+dbcreateCollectioncollectionname To create collection
+Object Id Format
+An ObjectID is a 12byte Field Of BSON type
+The first 4 bytes representing the Unix Timestamp of the
+document
+The next 3 bytes are the machine Id on which the MongoDB
+server is running
+The next 2 bytes are of process id
+The last Field is 3 bytes used for increment the objectid
+JSON Defination
+JSON stands for JavaScript Object Notationit is a
+lightweight format for storing and transporting dataJSON
+is often used when data is sent from a server to a web page
+and selfdescribing and easy to understand
+JSON Syntax Rules
+1 Data is in namevalue pairs
+2 Data is separated by commas
+3 Curly braces hold objects
+4 Square brackets hold arrays
+Example Of Json
+_id 1
+first_name Arun
+last_name Rao
+cell 8125552344
+city hubli
+email arungmail
+hobbies scrapbooking eating waffles working
+Difference Between JSON and BSON
+JSON BSON
+JSON stands for JavaScript Object Notation BSON stands for
+Binary JavaScript Object Notation
+JSON data contains its data basic in JSON format
+BSON gives extra datatypes over the JSON data
+Database like AnyDB redis etc stores information in JSON
+format
+MongoDB stores data in BSON format
+JSON uses less space in comparison to BSON BSON uses more
+space as compared to JSON
+It is used for the transmission of data It is used for the
+storage of the data
+"""
 
-Well, the years start coming and they don't stop coming
-Fed to the rules and I hit the ground running
-Didn't make sense not to live for fun
-Your brain gets smart but your head gets dumb
 
-So much to do, so much to see
-So what's wrong with taking the back streets?
-You'll never know if you don't go
-You'll never shine if you don't glow
+downtown = """If I could just hold you tonight"""
 
-Hey, now, you're an All Star, get your game on, go play
-Hey, now, you're a Rock Star, get the show on, get paid
-And all that glitters is gold
-Only shooting stars break the mold
-
-It's a cool place and they say it gets colder
-You're bundled up now wait 'til you get older
-But the meteor men beg to differ
-Judging by the hole in the satellite picture
-
-The ice we skate is getting pretty thin
-The water's getting warm so you might as well swim
-My world's on fire. How about yours?
-That's the way I like it and I'll never get bored.
-
-Somebody once asked could I spare some change for gas
-I need to get myself away from this place
-I said yep, what a concept
-I could use a little fuel myself
-And we could all use a little change
-
-Well, the years start coming and they don't stop coming
-Fed to the rules and I hit the ground running
-Didn't make sense not to live for fun
-Your brain gets smart but your head gets dumb
-
-So much to do, so much to see
-So what's wrong with taking the back streets?
-You'll never know if you don't go
-You'll never shine if you don't glow.
-
-And all that glitters is gold
-Only shooting stars break the mold"""
-
-downtown = """Making my way downtown
-Walking fast
-Faces pass
-And I'm home-bound
-
-Staring blankly ahead
-Just making my way
-Making a way
-Through the crowd
-
-And I need you
-And I miss you
-And now I wonder
-
-If I could fall into the sky
-Do you think time would pass me by?
-'Cause you know I'd walk a thousand miles
-If I could just see you tonight
-
-It's always times like these
-When I think of you
-And I wonder if you ever think of me
-'Cause everything's so wrong
-And I don't belong
-Living in your precious memory
-
-'Cause I need you
-And I miss you
-And now I wonder
-
-If I could fall into the sky
-Do you think time would pass me by?
-'Cause you know I'd walk a thousand miles
-If I could just see you tonight
-
-And I, I don't wanna let you know
-I, I drown in your memory
-I, I don't wanna let this go
-I, I don't
-
-Making my way downtown
-Walking fast
-Faces pass
-And I'm home-bound
-
-Staring blankly ahead
-Just making my way
-Making a way
-Through the crowd
-
-And I still need you
-And I still miss you
-And now I wonder
-
-If I could fall into the sky
-Do you think time would pass us by?
-'Cause you know I'd walk a thousand miles
-If I could just see you
-
-If I could fall into the sky
-Do you think time would pass me by?
-'Cause you know I'd walk a thousand miles
-If I could just see you
-If I could just hold you tonight"""
-
-give_up = """We're no strangers to love
-You know the rules and so do I
-A full commitment's what I'm thinking of
-You wouldn't get this from any other guy
-
-I just wanna tell you how I'm feeling
-Gotta make you understand
-
-Never gonna give you up
-Never gonna let you down
-Never gonna run around and desert you
-Never gonna make you cry
-Never gonna say goodbye
-Never gonna tell a lie and hurt you
-
-We've known each other for so long
-Your heart's been aching, but
-You're too shy to say it
-Inside, we both know what's been going on
-We know the game and we're gonna play it
-
-And if you ask me how I'm feeling
-Don't tell me you're too blind to see
-
-Never gonna give you up
-Never gonna let you down
-Never gonna run around and desert you
-Never gonna make you cry
-Never gonna say goodbye
-Never gonna tell a lie and hurt you
-
-Never gonna give you up
-Never gonna let you down
-Never gonna run around and desert you
-Never gonna make you cry
-Never gonna say goodbye
-Never gonna tell a lie and hurt you
-
-(Ooh, give you up)
-(Ooh, give you up)
-Never gonna give, never gonna give
-(Give you up)
-Never gonna give, never gonna give
-(Give you up)
-
-We've known each other for so long
-Your heart's been aching, but
-You're too shy to say it
-Inside, we both know what's been going on
-We know the game and we're gonna play it
-
-I just wanna tell you how I'm feeling
-Gotta make you understand
-
-Never gonna give you up
-Never gonna let you down
-Never gonna run around and desert you
-Never gonna make you cry
-Never gonna say goodbye
-Never gonna tell a lie and hurt you
-
-Never gonna give you up
-Never gonna let you down
-Never gonna run around and desert you
-Never gonna make you cry
-Never gonna say goodbye
-Never gonna tell a lie and hurt you
-
-Never gonna give you up
-Never gonna let you down
-Never gonna run around and desert you
-Never gonna make you cry
-Never gonna say goodbye
-Never gonna tell a lie and hurt you"""
+give_up = """We're no strangers to love"""

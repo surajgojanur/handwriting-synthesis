@@ -1,11 +1,15 @@
 import os
 import logging
+
 import numpy as np
 import svgwrite
+
 import drawing
 import lyrics
 from rnn import rnn
+from notes import notes
 
+print(notes)
 
 class Hand(object):
 
@@ -61,8 +65,8 @@ class Hand(object):
 
     def _sample(self, lines, biases=None, styles=None):
         num_samples = len(lines)
-        max_tsteps = 40 * max([len(i) for i in lines])
-        biases = biases if biases is not None else [0.5] * num_samples
+        max_tsteps = 40*max([len(i) for i in lines])
+        biases = biases if biases is not None else [0.5]*num_samples
 
         x_prime = np.zeros([num_samples, 1200, 3])
         x_prime_len = np.zeros([num_samples])
@@ -106,18 +110,18 @@ class Hand(object):
         return samples
 
     def _draw(self, strokes, lines, filename, stroke_colors=None, stroke_widths=None):
-        stroke_colors = stroke_colors or ['black'] * len(lines)
-        stroke_widths = stroke_widths or [2] * len(lines)
+        stroke_colors = stroke_colors or ['black']*len(lines)
+        stroke_widths = stroke_widths or [2]*len(lines)
 
         line_height = 60
         view_width = 1000
-        view_height = line_height * (len(strokes) + 1)
+        view_height = line_height*(len(strokes) + 1)
 
         dwg = svgwrite.Drawing(filename=filename)
         dwg.viewbox(width=view_width, height=view_height)
         dwg.add(dwg.rect(insert=(0, 0), size=(view_width, view_height), fill='white'))
 
-        initial_coord = np.array([0, -(3 * line_height / 4)])
+        initial_coord = np.array([0, -(3*line_height / 4)])
         for offsets, line, color, width in zip(strokes, lines, stroke_colors, stroke_widths):
 
             if not line:
@@ -171,6 +175,11 @@ if __name__ == '__main__':
         stroke_widths=stroke_widths
     )
 
+    # Calculate and print the average number of words per line
+    total_words = sum(len(line.split()) for line in lines)
+    avg_words_per_line = total_words / len(lines)
+    print(f"Average number of words per line: {avg_words_per_line:.2f}")
+
     # demo number 1 - fixed bias, fixed style
     lines = lyrics.all_star.split("\n")
     biases = [.75 for i in lines]
@@ -197,7 +206,7 @@ if __name__ == '__main__':
 
     # demo number 3 - varying bias, fixed style
     lines = lyrics.give_up.split("\n")
-    biases = .2 * np.flip(np.cumsum([len(i) == 0 for i in lines]), 0)
+    biases = .2*np.flip(np.cumsum([len(i) == 0 for i in lines]), 0)
     styles = [7 for i in lines]
 
     hand.write(
